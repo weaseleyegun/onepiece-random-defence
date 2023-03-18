@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input태그</title>
+</head>
+
+<body>
+    <form action="#" method="post">
+        <fieldset>
+            <legend>로그인</legend>
+            <p>ID :  <input type="text"></p>
+            <p>PW : <input type="password"></p>
+        </fieldset>
+        <p>검색 : <input type="search"></p>
+        <p>이메일 : <input type="email"></p>
+        <p>컬러선택 : <input type="color"></p>
+        <p>수량 : <input type="number" min="1" max="10" value="1"></p>
+        <p>만족도 : <input type="range" min="1" max="10" value="1"></p>
+        <p>
+            예<input type="radio" name="radioBtn" checked="checked">
+            아니오 <input type="radio" name="radioBtn">
+        </p>
+        <p>
+            HTML : <input type="checkbox" name="checkBtn" checked="checked">
+            CSS : <input type="checkbox" name="checkBtn">
+        </p>
+        <p>submit 타입 : <input type="submit" value="전송"></p>
+        <p>reset 타입 : <input type="reset" value="리셋"></p>
+        <p>button 타입 : <input type="button" value="버튼"></p>
+        <p><input type="image" src="../chapter_04/photo.jpeg" alt="검색"></p>
+        <p>첨부 파일 : <input type="file"></p>
+        <p>hidden 타입 : <input type="hidden" name="token"></p>
+        <p>datetime 타입 : <input type="datetime - local"></p>
+        <p>date 타입 : <input type="date"></p>
+        <p>month 타입 : <input type="month"></p>
+        <p>week 타입 : <input type="week"></p>
+        <p>설명<br>
+            <textarea name="desc" id="desc" cols="30" rows="10"></textarea>
+        </p>
+        <p>지역번호
+            <select>
+                <option selected="selected">02</option>
+                <option>031</option>
+                <option>053</option>
+            </select>
+        </p>
+
+        
+    </form>
+   
+</body>
+</html>
