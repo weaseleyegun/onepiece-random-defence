@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice01</title>
+</head>
+<body>
+    <header>
+        <h1>회원 가입을 환영합니다</h1>
+    </header>
+
+    
+    <form action="#" method="post">
+        <!-- 사용자 정보 -->
+        <fieldset>
+            <legend>사용자 정보</legend>
+            <nav>
+                <ul>
+                    <li>
+                        <label for="id" >
+                        아이디 <input type="text" id="id" placeholder="4자 ~ 10자 사이 , 공백없이"
+                        autocomplete="on" required="required">
+                        </label>
+                    </li>
+                    <li>
+                        <label for="email">
+                            이메일 <input type="email" id="email" multiple="multiple" 
+                            autocomplete="on" >
+                        </label>
+                    </li>
+                    <li>
+                        <label for="pw">
+                        비밀번호 <input type="password" placeholder="문자와 숫자 , 특수 기호 포함" 
+                        id="pw" required="required">
+                        </label>
+                    </li>
+                    <li>
+                        <label for="pw_confirm">
+                        비밀번호 확인 <input type="password" id="pw_confirm">
+                        </label>
+                        <input type="button" value="확인">
+                    </li>
+                </ul>
+            </nav>
+        </fieldset>
+        <!-- 이벤트와 새로운 소식 -->
+        <fieldset>
+            <legend>이벤트와 새로운 소식</legend>
+            <p>
+                <label for="yes">
+                메일 수신<input type="radio" name="radioBtn" id="yes" value="1"> 
+                </label>
+                <label for="no">
+                메일 수신 안 함 <input type="radio" name="radioBtn" id="no" checked="checked" value="0">
+                </label>
+            </p>
+        </fieldset>
+        <!-- 가입하기 / 취소 -->
+        <p><input type="submit" value="가입하기">
+        <input type="reset" value="취소"></p>
+    </form>
+
+</body>
+</html>
