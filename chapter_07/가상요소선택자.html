@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상요소선택자</title>
+    <style>
+        p::first-letter {font-size: 200%;}
+        p:first-child {color: pink;}
+        p{background: lightgray;}
+        p:last-child {background: greenyellow;}
+        p:nth-child(3) {color: blueviolet;}
+        p::before{content: "*";}
+        .box::after{
+            content:"항목을 선택해주세요";
+            color: aquamarine;
+        }
+        a {color: blue;}
+        a:hover {color: red;}
+
+    </style>
+</head>
+<body>
+    <a href="https:www.naver.com">네이버</a>
+    <div class="box">
+        <p>COMPANY</p>
+        <p>PRODUCT</p>
+        <p>SERVICE</p>
+        <p>COMMUNITY</p>
+    </div>
+    <p>CSS 가상 요소 선택자</p>
+    
+
+</body>
+</html>

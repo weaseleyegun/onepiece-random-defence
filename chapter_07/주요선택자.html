@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주요선택자</title>
+
+    <style>
+        * { color: brown; margin: 0; padding: 0;}
+        p {color: blue; font-size: 30px;}
+        #ctxt{color: yellow;}
+        .btxt{color: aqua;}
+        .abox p{color: green; font-weight: bold;}
+        .abox li{color: pink;}
+        .dbox ~ p{color: azure; font-weight: bold;}
+        .box2 > p{color: blueviolet;}
+        .box3 + p{color: red;}
+        h1,h2{text-align: center;}
+    </style>
+</head>
+
+<body>
+    <span>CSS 선택자</span>
+    <p style="color : red; font-size: 50px;">내부/ 외부 시타일 시트</p>
+    <p id="ctxt"> CSS 주요 선택자</p>
+    <p class="btxt">CSS 주요 선택자</p>
+    <p class="btxt">CSS 주요 선택자</p>
+
+    <div class="abox">
+        <p>CSS 주요 선택자</p>
+        <ul>
+            <li><p>HTML</p></li>
+            <li>CSS</li>
+        </ul>
+    </div>
+
+    <div class="box2">
+        <p>주요선택자</p>
+         <ul>
+            <li>
+                <p>주요선택자</p>
+            </li>
+            <li>
+                <p>주요선택자</p>
+            </li>
+         </ul>
+    </div>
+    <div class="box3">
+        <p>주요선택자1</p>
+        <p>주요선택자2</p>
+    </div>
+    <p>주요선택자3</p>
+    <p>주요선택자4</p>
+    <h2>CSS 주요 선택자</h2>
+
+
+    <div class="dobx">
+        <p>CSS 주요선택자1</p>
+        <p>CSS 주요선택자2</p>
+    </div>
+    <p>CSS 주요선택자3</p>
+    <p>CSS 주요선택자4</p>
+</body>
+
+</html> 
