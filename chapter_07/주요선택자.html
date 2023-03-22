@@ -7,15 +7,24 @@
     <title>주요선택자</title>
 
     <style>
+        /* 전체 선택자 */
         * { color: brown; margin: 0; padding: 0;}
+        /* 태그 선택자 */
         p {color: blue; font-size: 30px;}
+        /* id 선택자 */
         #ctxt{color: yellow;}
+        /* class 선택자 */
         .btxt{color: aqua;}
+        /* 하위선택자 */
         .abox p{color: green; font-weight: bold;}
         .abox li{color: pink;}
+        /* 형제 선택자 */
         .dbox ~ p{color: azure; font-weight: bold;}
+        /* 자식 선택자 */
         .box2 > p{color: blueviolet;}
+        /* 인접 선택자 */
         .box3 + p{color: red;}
+        /* 그룹 선택자 */
         h1,h2{text-align: center;}
     </style>
 </head>
