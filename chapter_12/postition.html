@@ -1,0 +1,40 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 비교를 위해 기본 마진 0지정 */
+        body,div,p {margin: 0px;}
+        p{width: 100px;height: 100px; padding :10px}
+
+        .box {
+            position: relative;
+            background: grey;
+            margin: 20px;
+        }
+        .red {background: red;}
+        .green {background-color: green;
+            position: absolute;
+            left: 50px; top: 50px; z-index: 1;
+        }
+        .blue {
+            background-color: blue;
+            position: relative;
+            left: 50px; top: 50px;z-index: 10;
+        }
+
+    </style>    
+        
+
+  </head>
+  <body>
+    <div class="box">
+        <p class="red">RED</p>
+        <p class="green">GREEN</p>
+        <p class="blue">BLUE</p>
+    </div>
+  </body>
+  </html>

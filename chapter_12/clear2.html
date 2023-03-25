@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* clear :both 할 요소가 없어 레이아웃이 깨짐 */
+        .mobile{background: lightblue; border: 1px solid; padding: 20px;}
+        .mobile1{background: lightblue; border: 1px solid; padding: 20px;}
+        .samsung {float: left; width: 47%; border: 1px solid;}
+        .apple { float: right; width: 47%; border: 1px solid;}
+        /* 가상으로 clear할 요소를 생성해 줌 */
+        .mobile1::after {display: block; content: ""; clear: both;}
+    
+    </style>
+</head>
+<body>
+    
+
+    <div class="mobile1">
+        <h1>모바일 기기</h1>
+
+        <div class="samsung">
+            <h3>삼성</h3>
+            <p>갤럭시 갤럭시 갤럭시 갤럭시 갤럭시 갤럭시 갤럭시 갤럭시 </p>
+        </div>
+
+        <div class="apple">
+            <h3>애플</h3>
+            <p>아이폰 아이폰 아이폰 아이폰 아이폰 아이폰 아이폰 아이폰 </p>
+        </div>
+    </div>
+    <div class="mobile">
+        <h1>모바일 기기</h1>
+
+        <div class="samsung">
+            <h3>삼성</h3>
+            <p>갤럭시 갤럭시 갤럭시 갤럭시 갤럭시 갤럭시 갤럭시 갤럭시 </p>
+        </div>
+
+        <div class="apple">
+            <h3>애플</h3>
+            <p>아이폰 아이폰 아이폰 아이폰 아이폰 아이폰 아이폰 아이폰 </p>
+        </div>
+    </div>
+
+</body>
+</html>
