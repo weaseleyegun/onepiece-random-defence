@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 내장 함수
+
+        //인코딩 디코딩
+        let str = '자바 스크립트';
+        let encStr = encodeURIComponent(str);
+        console.log(encStr);
+
+        let decStr = decodeURIComponent(encStr);
+        console.log(decStr);
+
+        //숫자 , 유한 / 무한 체크
+
+        let str2 = '숫자';
+        console.log(isNaN(str2)); // 숫자가 아니라서 true
+
+        let str3 = '100';
+        console.log(isNaN(str3)); // 숫자라서 false
+
+        let num1 = 1/0; // 무한대
+        console.log(num1);
+        console.log(isFinite(num1)); // 유한해 ? false
+        let num2 = 1;
+        console.log(isFinite(num2)); // 유한하니까 true
+
+        if(isFinite(num1)){
+            console.log('유한값');
+        }else{
+            console.log('무한값');
+        }
+        //숫자 변환
+        let num3 = Number('5');
+        console.log(typeof(num3));
+
+        //문자 변환
+        let str4 = String(6);
+        console.log(typeof(str4));
+
+        let num4 = parseInt('100.88px'); 
+        console.log(num4 , typeof(num4));
+
+        let num5 = parseFloat('100.88px');
+        console.log(num5,typeof(num5));
+
+        //자바코드 변경 함수
+        let str5 = 'var n1 = 20'; //따옴표 안에 var 만 먹힘 , let은 안먹힘
+        let str6 = 'var n2 = 30';
+        eval(str5);
+        eval(str6);
+        console.log(n1 + n2);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
