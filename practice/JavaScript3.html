@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const UNIT_50000 = 50000;
+        const UNIT_10000 = 10000;
+        const UNIT_5000 = 5000;
+        const UNIT_1000 = 1000;
+        const UNIT_500 = 500;
+        const UNIT_100 = 100;
+            
+        
+        function charge(money){
+            
+            while (money>0) {
+                let num = 0;
+                let unit;
+                if (money >= UNIT_50000){
+                    num = Math.floor(money/UNIT_50000);
+                    unit = UNIT_50000;
+                }
+                else if (money >= UNIT_10000){
+                    num = Math.floor(money/UNIT_10000);
+                    unit = UNIT_10000;
+                }
+                else if (money >= UNIT_5000){
+                    num = Math.floor(money/UNIT_5000);
+                    unit = UNIT_5000;
+                }else if (money >= UNIT_1000){
+                    num = Math.floor(money/UNIT_1000);
+                    unit = UNIT_1000;
+                }else if (money >= UNIT_500){
+                    num = Math.floor(money/UNIT_500);
+                    unit = UNIT_500;
+                }else if (money >= UNIT_100){
+                    num = Math.floor(money/UNIT_100);
+                    unit = UNIT_100;
+                }else if (money >= UNIT_50){
+                    num = Math.floor(money/UNIT_50);
+                    unit = UNIT_50;
+                }else if (money >= UNIT_10){
+                    num = Math.floor(money/UNIT_10);
+                    unit = UNIT_10;
+                }
+                else{
+                    console.log("잔돈이 없습니다.")
+                }
+                money = money- (unit*num);
+                console.log(unit+"X"+num);
+                
+            }
+        }
+        charge(66000);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
