@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //3. 클래스 객체 생성
+        class Person {
+            constructor(name,age){
+                this.name = name;
+                this.age = age;
+            }
+
+            showInfo(){
+                return this.name + ',' + this.age;
+            }
+
+            getName(){
+                return this.name;
+            }
+
+            getAge(){
+                return this.age;
+            }
+
+            setName(name){
+                this.name = name;
+            }
+        };
+
+        let person = new Person('홍길동',25);
+        console.log(person.name);
+        console.log(person.showInfo());
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

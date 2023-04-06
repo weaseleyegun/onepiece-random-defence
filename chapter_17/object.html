@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1. 객체 리터럴
+        var person = {
+            name : '김도건',
+            age : 25,
+            showInfo : function(){
+                return this.name + ',' + this.age;
+            }
+        };
+        console.log(person.name);
+        console.log(person.showInfo());
+
+        //2. 객체 생성자 함수
+        function Person(name,age){
+            this.name = name;
+            this.age = age;
+            this.showInfo = function(){
+                return this.name + ',' + this.age;
+            }
+        } ;
+        let person2 = new Person('홍길동',50);
+        console.log(person2.name);
+        console.log(person2.showInfo());
+        //속성 추가
+        person2.address = '대구';
+        
+        //속성 삭제
+        delete person2.age;
+
+        //속성 확인
+        for (var p in person2){
+            console.log(p + ':' + person2[p]);
+        }; 
+        //속성 변경
+        person2.showInfo = function() {
+            return this.name + ',' + this.address;
+        };
+
+        for (var p in person2){
+            console.log(person2.showInfo());
+            console.log(p + ':' + person2[p]);
+        };
+        console.log(person2['name']);
+        //다른 객체 생성시 영향을 받지 않음
+        let kim = new Person('kim',10);
+        for (var p in kim){
+            console.log('kim : ' + p + ':' + kim[p]);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

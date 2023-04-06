@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Calculator{
+            constructor(userName, korNum , engNum){
+                this.userName = userName;
+                this.korNum = korNum;
+                this.engNum = engNum;
+                
+            };
+
+            average(){
+                return (this.korNum +this.engNum)/2; 
+            };
+        };
+
+        calculator.janNum = 60;
+
+
+        var calculator = new Calculator('김도건', 80 , 60);
+        document.write('평균 점수 : ' + calculator.average());
+        for(var i in calculator){
+            console.log(i + ":" + calculator[i]);
+        }
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

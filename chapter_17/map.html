@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let map = new Map();
+        map.set('1' , 'html');
+        map.set('2', 'css');
+        map.set('3','javaScript');
+        map.delete('2');
+        console.log(map.get('3'));
+        console.log(map);
+
+        //Set 내장 객체
+
+        let set = new Set;
+        set.add('a');
+        set.add('b');
+        set.add('c');
+        set.delete('c');
+        console.log(set);
+        set.clear();
+        console.log(set);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

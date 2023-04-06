@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         //money 단위.
+        let unit = [50000,10000,5000,1000,500,100];
+        let num;
+        class Charge{
+            constructor(money){
+                this.money = money;
+                this.unit = unit;
+            };
+
+            chargeMoney(money){
+                if(money >= unit[0]){
+                    num = money/unit[0];
+                    money = money - unit[0];
+                }
+                else if(money >= unit[1]){
+                    num = Math.floor(money/unit[1]);
+                    money = money - unit[1]*num;
+                }
+                else if(money >= unit[2]){
+                    num = Math.floor(money/unit[2]);
+                    money = money - unit[2]*num;
+                }
+                else if(money >= unit[3]){
+                    num = Math.floor(money/unit[3]);
+                    money = money - unit[3]*num;
+                }
+                else if(money >= unit[4]){
+                    num = Math.floor(money/unit[4]);
+                    money = money - unit[4]*num;
+                }
+                else if(money >= unit[5]){
+                    num = Math.floor(money/unit[5]);
+                    money = money - unit[5]*num;
+                }
+                else{
+                    console.log("잔돈이 없습니다.")
+                }
+                
+            }
+        };
+
+        var charge = new Charge(60000);
+        console.log(charge.chargeMoney());
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
