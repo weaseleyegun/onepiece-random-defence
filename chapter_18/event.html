@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){ //아직 생성이 안돼서 onload를 해주어야 함.
+            let btn2 = document.getElementById('btn2'); 
+            btn2.onclick = function(){
+            console.log("btn2 클릭 이벤트");
+            let btn3 = document.getElementById('btn3');
+        };
+            btn3.onclick = print; //()를 빼야 버튼을 누를때마다 동작함
+        };
+        
+        function print(){
+            alert('test');
+        };
+    </script>
+</head>
+<body>
+    <div style="border: 1px solid black;">
+    
+    <!-- 1. 인라인 이벤트 -->
+    <button onclick="console.log('인라인 이벤트 클릭')";>인라인 이벤트</button>
+    <button ondblclick="console.log('더블클릭 이벤트')">더블클릭 이벤트</button>
+    <button onmouseover="console.log('마우스 오버 이벤트')">마우스 오버</button>
+    </div>
+    <!-- 2. 기본 이벤트 연결 -->
+    <div style="border: 1px solid black;">
+    <button onclick="msgFun();">연결 방식</button>
+    </div>
+    <script>
+        function msgFun(){
+            console.log('클릭 이벤트 발생');
+        }
+    </script>
+    <!-- 3. -->
+    <div style="border: 1px solid black;">
+    <button id="btn1">버튼1</button>
+    <button id="btn2">버튼2</button>
+    <button id="btn3">버튼3</button>
+    </div>
+    <script>
+        let btn = document.getElementById('btn1');
+        btn.onclick = function(){
+            console.log("btn1 클릭 이벤트");
+        };
+    </script>
+</body>
+</html>

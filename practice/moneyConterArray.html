@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let unit = [50000,10000,5000,1000,500,100];
+        let num;
+        function ChangeMoney(money){
+            for(let i=0; i< unit.length; i++){
+                let num = Math.floor(money/unit[i]);
+                money = money - unit[i]*num;
+                console.log(unit[i] + 'X' + num);
+            };
+        };
+        ChangeMoney(33000);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

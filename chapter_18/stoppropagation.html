@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let parents = document.getElementById('parents');
+            let child = document.getElementById('child');
+            /*이벤트 버블링 : 1순위 -> 2순위로 진행된는 것
+            stopPropagation을 쓰면 1순위만 실행 됨.*/
+            parents.onclick = function() {
+                alert('부모 이벤트'); //2순위 
+            }
+            child.onclick = function() {
+                event.stopPropagation();
+                alert('자식 이벤트'); //1순위  
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="parents">
+        <p id="child" style="background-color: lightblue;">클릭</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            height: 100px; background-color: lightblue;
+            margin-top: 50px;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            let btn = document.getElementById('btn');
+            let area = document.getElementById('area');
+            btn.onclick = function(event) {
+                console.log(event.target);
+                console.log(event.type); //이벤트 타입 click
+                console.log("클라이언트 기준 : "+event.clientX+','+event.clientY);
+                console.log("스크린 기준 : "+event.screenX+','+event.screenY);
+
+            }
+            area.onclick = function(event){
+                alert(event.button);
+            };
+        };
+    </script>
+</head>
+<body>
+    <button id="btn">버튼</button>
+    <div id="area">
+        마우스 왼쪽, 오른쪽 , 가운데 클릭
+    </div>
+</body>
+</html>
