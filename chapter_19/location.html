@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            console.log('init');
+            var reloadBtn = document.getElementById('reloadBtn');
+            var replaceBtn = document.getElementById('replaceBtn');
+            var infoBtn = document.getElementById('infoBtn');
+            // console.log(reloadBtn+replaceBtn+infoBtn);
+
+            reloadBtn.onclick = function() {
+                location.reload();
+            }
+            replaceBtn.onclick = function() {
+                location.replace('http://naver.com');
+            }
+            infoBtn.onclick = function() {
+                console.log('hash : ' + location.hash);
+                console.log('host : ' + location.host);
+                console.log('port : ' + location.port);
+                console.log('pathname : '+ location.pathname);
+                console.log('href : ' + location.href);
+                console.log('protocal : '+ location.protocol);
+                console.log('search : '+ location.search);
+            }
+        }
+    </script>
+</head>
+<body>
+    <button id="reloadBtn">Reload</button>
+    <button id="replaceBtn">Replace</button>
+    <button id="infoBtn">Info</button>
+</body>
+</html>

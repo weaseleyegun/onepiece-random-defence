@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            //getElementById
+            var text1 = document.getElementById('text1');
+            console.log(text1);
+
+            //getElementByName
+            var text2 = document.getElementsByName('text2');
+            console.log(text2[0]);
+
+            //getElementByTagName
+            var text3 = document.getElementsByTagName('p');
+            console.log(text3);
+
+            //querySelector
+            var list1 = document.querySelector('#box1 > ul > li');
+            var list2 = document.querySelectorAll('#box1 > ul > li');
+            console.log(list1);
+            console.log(list2);
+
+            //선택한 요소의 속성을 변경 가능
+            list1.style.background = "#ff6600";
+            list2[1].style.background = "blue";
+            list2.item(2).style.background = "#ccc";
+        }
+    </script>
+</head>
+<body>
+    <div id="box1">
+        <p id="text1">hello</p>
+        <p name="text2">world</p>
+        <ul>
+            <li>내용1</li>
+            <li>내용2</li>
+            <li>내용3</li>
+        </ul>
+    </div>
+</body>
+</html>

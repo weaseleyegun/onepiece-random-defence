@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+        }
+    </style>
+    <script>
+        function createAttr(){
+            var div = document.createElement('div');
+            var a = document.createElement('a');
+            var txt = document.createTextNode('구글');
+
+            //<a> 태그 속성 추가
+            a.setAttribute('id','add');
+            a.setAttribute('href','http://google.com');
+            a.setAttribute('target','_blank');
+
+            a.appendChild(txt);
+            div.appendChild(a);
+            document.body.appendChild(div);
+        }
+
+        function removeAttr() {
+            var a = document.getElementsByTagName('a');
+            console.log(a);
+            for(var i of a){
+                i.removeAttribute('href');
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="createAttr();">속성추가</button>
+    <button onclick="removeAttr();">속성삭제</button>
+</body>
+</html>
