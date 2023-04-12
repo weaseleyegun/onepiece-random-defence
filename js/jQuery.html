@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery 사용</title>
+    <script src="./js/jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    
+    <script>
+        //#은 아이디 선택자
+        $(document).ready(function () {
+            // alert('test');
+            $("#m1").text("과목");
+            $("#m2 > div").text(function(index,value){
+                return value+'-'+index;
+            });
+            $("#m1").html("<p style='color:red'>Hello world</p>");
+            
+        });
+        
+    </script>
+</head>
+<body>
+    <div id="m1">타이틀</div>
+    <div id="m2">
+        <div>HTML</div>
+        <div>CSS</div>
+        <div>JavaScript</div>
+    </div>
+</body>
+</html>

@@ -6,21 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function checkBtn(){
-            var h = document.getElementById('h1');
-            var txt = document.querySelector('h1');
-            console.log(txt);
-            h.innerText = txt;
-        }
-        function back (){
-
-            return 
+        window.onload = function() {
+            var changeText = document.getElementById('in');
+            var titleHh = document.getElementById('h1');
+            var ok =document.getElementById('ok');
+        
+            ok.onclick = function(){
+                titleHh.innerHTML = changeText.value;
+            }
         }
     </script>
 </head>
 <body>
     <h1 id="h1">제목 글자를 바꾸세요.</h1>
-    <input type="text" id="textBox">
-    <button id="btn" onclick="checkBtn();">확인</button>
+    <input type="text" id="in">
+    <input type="button" value="확인" id="ok">
 </body>
 </html>

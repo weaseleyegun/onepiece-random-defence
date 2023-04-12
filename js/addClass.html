@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .on {color : red;}
+    </style>
+    <script src="./js/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#m1").addClass("on");
+            $("#m1").removeClass("on");
+
+            if($("#m1").hasClass("on")){
+                alert('on');
+            }else{
+                alert('off');
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="m1">HTML</div>
+    <div id="m2">CSS</div>
+</body>
+</html>

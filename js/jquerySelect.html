@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // alert('test');
+            $("input:text").css('background','lightblue');
+            $("input:password").css('background','lightblue');
+            $(":button").css('background','blue');
+            $("input:checked + label").css('background','red');
+            $("option:selected").css('background','red');
+            $("textarea:disabled").css('background','pink');
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <label>아이디 입력 : <input type="text"></input></label>
+        <label>비밀번호 입력 : <input type="password"></input></label>
+    </div>
+    <div><button type="button">확인</button></div>
+    <div>
+        <input type="checkbox" checked="checked" id="chk"></input><label for="chk">체크</label>
+    </div>
+    <div>
+        <select>
+            <option>옵션 1</option>
+            <option selected="selected">옵션 2</option>
+            <option>옵션 3</option>
+        </select>
+    </div>
+    <div><textarea cols="30" rows="10" disabled="disabled"></textarea></div>
+</body>
+</html>

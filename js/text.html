@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // alert('test');
+            $("p").css("border","3px solid blue");
+            $(".logo").css("font-size" , "50px");
+            $("div.util").css("background" , "lightblue");
+            $("#gnb").css("border" , "3px solid red");
+            $("#gnb ul").css("border", "2px solid black");
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <p>Title</p>
+    </div>
+    <div class="logo">
+        Logo
+    </div>
+    <div class="util">Sign up</div>
+    <nav id="gnb">
+        <ul>
+            <li>Menu1</li>
+            <li>Menu2</li>
+            <li>
+                <ul>
+                    <li>SS</li>
+                </ul>
+            </li>
+            
+        </ul>
+    </nav>
+</body>
+</html>

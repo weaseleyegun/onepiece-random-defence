@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var arr = ['html','css','javascript'];
+            $.each(arr,function(index,value){
+                console.log(index+'-'+value);
+            })
+            $("div").each(function(index,element){
+                console.log(index);
+                console.log(element);
+            });
+            var arr2 = $.map(arr, function(value,index){
+                return value+'-'+index;
+            });
+            console.log(arr2);
+        });
+    </script>
+</head>
+<body>
+    <div class="m1">내용 1</div>
+    <div class="m2">내용 2</div>
+    <div class="m3">내용 3</div>
+</body>
+</html>
