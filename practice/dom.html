@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+           margin: 0px; 
+        }
+    </style>
+    <script src="/js/js/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                if($("#id").text()==""||$("#pwd").text()==""){
+                    alert('값을 입력하세요');
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <label for="id">
+        <p>아이디 : <input type="text" id="id">아이디 값을 입력하시오</input></p>
+    </label>
+    <label for="pwd">
+        <p>비밀번호 : <input type="password" id="pwd">비밀번호 값을 입력하시오</input></p>
+    </label>
+    <button id="btn">로그인</button>
+</body>
+</html>

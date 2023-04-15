@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 5px;
+        }
+        .box {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+        }
+    </style>
+    <script src="/js/js/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#m1 button:eq(0)").click(function(){
+                $("#m1 .box").animate({top:100,left:100},1000,"swing",function(){
+                    $(this).text("Custom effect 1");
+                    // $("#m1 .box").stop();
+                })
+            })
+            $("#m1 button:eq(1)").click(function(){
+                $("#m1 .box").animate({width: '400px'}, "fast" , "linear",function(){
+                    $(this).text("Custom effect 2");
+                });
+            })
+            $("#m1 button:eq(2)").click(function(){
+                $("#m1 .box").stop();
+                
+            })
+        });
+    </script>
+</head>
+<body>
+    <div id="m1">
+        <button>Custom Effect 1</button>
+        <button>Custom Effect 2</button>
+        <button>Custom Effect Stop</button>
+        <div class="box">내용</div>
+    </div>
+</body>
+</html>

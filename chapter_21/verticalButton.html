@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            margin: 2px;
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            display: none;
+        }
+    </style>
+    <script src="/js/js/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#m1 button:eq(0)").click(function(){
+                $("#m1 .box").show();
+            });
+            $("#m1 button:eq(1)").click(function(){
+                $("#m1 .box").hide();
+            });
+            $("#m1 button:eq(2)").click(function(){
+                $("#m1 .box").toggle("fast", "swing");
+            });
+            $("#m1 button:eq(3)").click(function(){
+                $("#m1 .box").slideDown("fast","swing");
+            });
+            $("#m1 button:eq(4)").click(function(){
+                $("#m1 .box").slideUp("fast","swing");
+            });
+            $("#m1 button:eq(5)").click(function(){
+                $("#m1 .box").slideToggle("fast","swing");
+            });
+            $("#m1 button:eq(6)").click(function(){
+                $("#m1 .box").fadeIn(1500,"swing");
+            });
+            $("#m1 button:eq(7)").click(function(){
+                $("#m1 .box").fadeOut(1500,"swing");
+            });
+            $("#m1 button:eq(8)").click(function(){
+                $("#m1 .box").fadeToggle(1500,"swing");
+            });
+            $("#m1 button:eq(9)").click(function(){
+                $("#m1 .box").fadeTo("slow",0.5);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="m1">
+        <button>show</button>
+        <button>hide</button>
+        <button>toggle</button>
+        <button>slideDown</button>
+        <button>slideUp</button>
+        <button>slideToggle</button>
+        <button>fadeIn</button>
+        <button>fadeOut</button>
+        <button>fadeToggle</button>
+        <button>fadeTo</button>
+        <div class="box">내용</div>
+    </div>
+</body>
+</html>

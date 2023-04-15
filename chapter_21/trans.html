@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #m1 {
+            height: 200px;
+            background-color: lightblue;
+            padding: 30px;
+
+        }
+        .move {
+            height: 100px;
+            background-color: lightcoral;
+            transform: translateX(-2400px);
+            transition: all 0.8s;
+        }
+        .move.on {
+            height: 200px;
+            transform: translateX(0px);
+        }
+        
+    </style>
+    <script src="/js/js/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#m1").hover(function(){
+                $(".move").toggleClass("on");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="m1">
+        <div class="move"></div>
+    </div>
+</body>
+</html>

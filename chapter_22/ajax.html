@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/js/js/jquery-3.6.4.min.js"></script>
+    <script>
+        //비 동기로 API를 날리는 방식
+        $(document).ready(function(){
+            getAjaxData();
+        });
+
+        function getAjaxData(){
+            $.ajax({
+                type: "GET",
+                url:"/chapter_22/data.json",
+                dataType:"json",
+                success:function(data, status , xhr){
+                    alert('success');
+                },
+                error: function(xhr,status,error){
+                    alert('error');
+                },
+                complete: function(xhr , status){
+                    alert('complete');
+                }
+            })
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

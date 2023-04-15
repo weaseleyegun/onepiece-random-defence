@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #m1 {
+            height: 200px;
+            background-color: lightblue;
+            padding: 30px;
+        }
+        #m2 {
+            height: 100px;
+            background-color: lightcoral;
+            padding: 30px;
+        }
+    </style>
+    <script src="/js/js/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#m1").mouseenter(function(){
+                $("#info").prepend('<p> m1 mouseenter</p>')
+            })
+            $("#m1").mouseleave(function(){
+                $("#info").prepend('<p> m1 mouseleave</p>')
+            })
+            
+            
+        });
+    </script>
+</head>
+<body>
+    <div id="m1">
+        <div id="m2"></div>
+    </div>
+    <div id="info">
+
+    </div>
+</body>
+</html>

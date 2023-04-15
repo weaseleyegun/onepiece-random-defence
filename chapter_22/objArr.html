@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/js/js/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            getLoadData();
+        });
+
+        function getLoadData(){
+            $("#list1").load("/chapter_22/data.json" , function(data , status , xhr){
+                console.log(data);
+                console.log(status);
+                
+                var objArr = JSON.parse(data);
+                // console.log(objArr[0].score1);
+                $.each(objArr , function(index , obj){
+                    console.log(obj.name + ',' + obj.score1);
+                })
+            })
+        }
+    </script>
+</head>
+<body>
+    <div id="list1"></div>
+</body>
+</html>
